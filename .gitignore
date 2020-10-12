@@ -107,3 +107,8 @@ dist
 node_modules
 lib
 .env
+*.csv
+*.zip
+GoogleNews-vectors-negative300.bin.gz
+.ipynb_checkpoints
+Coffee_bot/bot-env

@@ -8,11 +8,11 @@ const restify = require('restify');
 const { BotFrameworkAdapter } = require('botbuilder');
 
 // This bot's main dialog.
-const { EmptyBot } = require('./bot');
+const { CoffeeBot } = require('./bot');
 
 // Create HTTP server
 const server = restify.createServer();
-server.listen(process.env.port || process.env.PORT || 3978, () => {
+server.listen(process.env.port || process.env.PORT || 3979, () => {
     console.log(`\n${ server.name } listening to ${ server.url }`);
 });
 
@@ -44,7 +44,7 @@ adapter.onTurnError = async (context, error) => {
 };
 
 // Create the main dialog.
-const myBot = new EmptyBot();
+const myBot = new CoffeeBot();
 
 // Listen for incoming requests.
 server.post('/api/messages', (req, res) => {
